@@ -375,7 +375,7 @@ body {
 .hero-title {
   margin-block: 15px 30px;
   color: var(--oxford-blue-1);
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .hero-text {
@@ -593,6 +593,7 @@ body {
 \*-----------------------------------*/
 
 .cta {
+  margin-top: 16rem;
   background-color: var(--oxford-blue-1);
 }
 
@@ -1443,31 +1444,37 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly darker overlay for better contrast */
+  backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
 }
 
 .popup-content {
   background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 12px; /* Rounded corners for a modern look */
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  position: relative; /* For positioning close button */
 }
 
+/* Close button styles */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+  position: absolute;
+  color: #333;
+  right: 3rem;
+  top: 22px;
+  font-size: 32px;
   font-weight: bold;
   cursor: pointer;
+  transition: color 0.3s; /* Smooth transition effect */
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: var(--carolina-blue); /* Matches button color for consistency */
   text-decoration: none;
-  cursor: pointer;
 }
 
 /* Form styles */
@@ -1476,20 +1483,59 @@ body {
   flex-direction: column;
 }
 
+.popup h2{
+  margin-bottom: 2rem;
+}
 .appointment-form input,
 .appointment-form select {
-  margin-bottom: 10px;
-  padding: 5px;
+  margin-bottom: 15px; /* Increased margin for spacing */
+  padding: 12px;
+  border: 1px solid #ddd; /* Light border for inputs */
+  border-radius: 8px; /* Rounded corners for inputs */
+  font-size: 16px; /* Larger text for readability */
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus {
+  border-color: var(--carolina-blue); /* Accent border color on focus */
+  outline: none; /* Remove default outline */
 }
 
 .appointment-form button {
-  background-color: #ff5531;
+  background-image: linear-gradient(
+    var(--deg, 90deg),
+    var(--carolina-blue) 0%,
+    var(--royal-blue-light) 100%
+  );
   color: white;
   border: none;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners for button */
   cursor: pointer;
+  font-size: 18px; /* Larger text for the button */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
 .appointment-form button:hover {
-  background-color: #e64a2e;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.appointment-form button:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* media queries for responsivenes */
+
+@media  (max-width: 768px){
+  .hero-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cta{
+    margin-top: 5rem;
+  }
+  
 }

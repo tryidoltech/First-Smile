@@ -38,7 +38,7 @@
 
     <header class="header">
       <div class="header-top">
-        <div class="container">
+        <div class="container ">
           <ul class="contact-list">
             <li class="contact-item">
               <ion-icon name="mail-outline"></ion-icon>
@@ -157,11 +157,11 @@
           style="background-image: url('./assets/images/hero-bg.png')"
           aria-label="hero"
         >
-          <div class="container">
+          <div class="container hero-container">
             <div class="hero-content">
-              <p class="section-subtitle">Welcome To Dentelo</p>
+              <p class="section-subtitle">Welcome To First Smile</p>
 
-              <h1 class="h1 hero-title">We Are Best Dental Service</h1>
+              <h2 class="h1 hero-title">We Are Best Dental Service</h2>
 
               <p class="hero-text">
                 Donec vitae libero non enim placerat eleifend aliquam erat
@@ -413,7 +413,7 @@
         - #DOCTOR
       -->
 
-        <section class="section doctor" aria-label="doctor">
+        <!-- <section class="section doctor" aria-label="doctor">
           <div class="container">
             <p class="section-subtitle text-center">Our Doctor</p>
 
@@ -597,7 +597,7 @@
               </li>
             </ul>
           </div>
-        </section>
+        </section> -->
 
         <!-- 
         - #CTA
@@ -1072,12 +1072,11 @@
       <div class="popup-content">
         <span class="close">&times;</span>
         <h2>Book Appointment</h2>
-        <form class="appointment-form">
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email" required />
-          <input type="tel" placeholder="Phone Number" required />
-          <input type="date" required />
-          <select required>
+        <form class="appointment-form"  id="appointmentForm">
+          <input type="text" name="fullName"  placeholder="Full Name" required />
+          <input type="tel" name="phoneNumber" placeholder="Phone Number" required />
+          <input type="date" name="appointmentDate" required />
+          <select name="service" required>
             <option value="">Select Service</option>
             <option value="root-canal">Root Canal</option>
             <option value="alignment">Alignment Teeth</option>
