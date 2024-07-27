@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.about-banner {
+  height: 500px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.section-text {
+  max-width: 800px;
+  margin: 20px auto;
+}
