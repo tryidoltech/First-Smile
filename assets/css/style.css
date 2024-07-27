@@ -463,6 +463,9 @@ body {
 
 .about-banner {
   margin-block-end: 50px;
+}
+
+.about-banner-hero{
   transform: translateX(-100%);
   opacity: 0;
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
@@ -479,18 +482,18 @@ body {
   padding-inline: 15px;
 }
 
-.about-content {
+.about-content-hero {
   transform: translateX(100%);
   opacity: 0;
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-.about-banner:hover {
+.about-banner-hero:hover {
   transform: translateX(0%) !important;
   opacity: 1 !important;
 }
 
-.about-content:hover {
+.about-content-hero:hover {
   transform: translateX(0%) !important;
   opacity: 1 !important;
 }
@@ -739,12 +742,15 @@ body {
 .blog-card {
   border-radius: var(--radius-4);
   box-shadow: var(--shadow-5);
+}
+
+.blog-card-hero{
   opacity: 0;
   transform: translateY(50px);
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-.blog-card:hover {
+.blog-card-hero:hover {
   transform: translateY(0) !important;
   opacity: 1 !important;
 }

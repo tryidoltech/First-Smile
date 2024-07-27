@@ -233,8 +233,8 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger);
 
   // Select the elements to animate
-  const banner = document.querySelector('.about-banner');
-  const content = document.querySelector('.about-content');
+  const banner = document.querySelector('.about-banner-hero');
+  const content = document.querySelector('.about-content-hero');
 
   // GSAP animation for scroll trigger
   gsap.fromTo(
@@ -274,8 +274,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   // Select the elements to animate
-  const banner = document.querySelector('.about-banner');
-  const content = document.querySelector('.about-content');
+  const banner = document.querySelector('.about-banner-hero');
+  const content = document.querySelector('.about-content-hero');
 
   // GSAP animation on hover
   gsap.fromTo(
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger);
 
   // Select all blog cards
-  const blogCards = document.querySelectorAll('.blog-card');
+  const blogCards = document.querySelectorAll('.blog-card-hero');
 
   // GSAP animation for scroll-triggered animation
   blogCards.forEach(card => {
