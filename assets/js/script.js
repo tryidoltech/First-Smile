@@ -98,7 +98,7 @@ form.onsubmit = function (event) {
     Thank you!`);
 
   // WhatsApp URL
-  const userPhoneNumber = "917052101786";
+  const userPhoneNumber = "917236965700";
   const whatsappUrl = `https://wa.me/${userPhoneNumber}?text=${message}`;
 
   // Redirect to WhatsApp
