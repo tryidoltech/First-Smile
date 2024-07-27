@@ -461,6 +461,9 @@ body {
 
 .about-banner {
   margin-block-end: 50px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .about .section-text-1 {
@@ -472,6 +475,22 @@ body {
   max-width: max-content;
   margin-block-start: 30px;
   padding-inline: 15px;
+}
+
+.about-content {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.about-banner:hover {
+  transform: translateX(0%) !important;
+  opacity: 1 !important;
+}
+
+.about-content:hover {
+  transform: translateX(0%) !important;
+  opacity: 1 !important;
 }
 
 /*-----------------------------------*\
@@ -718,6 +737,14 @@ body {
 .blog-card {
   border-radius: var(--radius-4);
   box-shadow: var(--shadow-5);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.blog-card:hover {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
 }
 
 .blog-card .card-banner {

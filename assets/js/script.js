@@ -224,3 +224,139 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// gsap animation for hero section part 3
+
+// When the DOM content is fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Select the elements to animate
+  const banner = document.querySelector('.about-banner');
+  const content = document.querySelector('.about-content');
+
+  // GSAP animation for scroll trigger
+  gsap.fromTo(
+    banner,
+    { x: '-100%', opacity: 0 }, // Starting position
+    {
+      x: '0%', 
+      opacity: 1, 
+      duration: 1, 
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: banner,
+        start: 'top 80%', // Trigger animation when banner is 80% from the top of the viewport
+        end: 'bottom 30%', // End animation when banner is 30% from the bottom of the viewport
+        scrub: true // Smooth scrubbing
+      }
+    }
+  );
+
+  gsap.fromTo(
+    content,
+    { x: '100%', opacity: 0 }, // Starting position
+    {
+      x: '0%', 
+      opacity: 1, 
+      duration: 1, 
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: content,
+        start: 'top 80%', // Trigger animation when content is 80% from the top of the viewport
+        end: 'bottom 30%', // End animation when content is 30% from the bottom of the viewport
+        scrub: true // Smooth scrubbing
+      }
+    }
+  );
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Select the elements to animate
+  const banner = document.querySelector('.about-banner');
+  const content = document.querySelector('.about-content');
+
+  // GSAP animation on hover
+  gsap.fromTo(
+    banner,
+    { x: '-100%', opacity: 0 }, // Starting position
+    {
+      x: '0%', 
+      opacity: 1, 
+      duration: 0.5, 
+      ease: 'power2.out',
+      paused: true, // Pauses the animation initially
+      onComplete: function() {
+        banner.addEventListener('mouseenter', () => gsap.play());
+        banner.addEventListener('mouseleave', () => gsap.reverse());
+      }
+    }
+  );
+
+  gsap.fromTo(
+    content,
+    { x: '100%', opacity: 0 }, // Starting position
+    {
+      x: '0%', 
+      opacity: 1, 
+      duration: 0.5, 
+      ease: 'power2.out',
+      paused: true, // Pauses the animation initially
+      onComplete: function() {
+        content.addEventListener('mouseenter', () => gsap.play());
+        content.addEventListener('mouseleave', () => gsap.reverse());
+      }
+    }
+  );
+});
+
+//blog section animation part hero section
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Register GSAP plugins
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Select all blog cards
+  const blogCards = document.querySelectorAll('.blog-card');
+
+  // GSAP animation for scroll-triggered animation
+  blogCards.forEach(card => {
+    gsap.fromTo(
+      card,
+      { opacity: 0, y: 50 }, // Starting position
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 80%', // Trigger animation when card is 80% from the top of the viewport
+          end: 'bottom 30%', // End animation when card is 30% from the bottom of the viewport
+          scrub: true // Smooth scrubbing
+        }
+      }
+    );
+  });
+
+  // GSAP animation for hover
+  blogCards.forEach(card => {
+    gsap.fromTo(
+      card,
+      { scale: 1, rotation: 0 }, // Initial scale and rotation
+      {
+        scale: 1.05,
+        rotation: 2,
+        duration: 0.5,
+        ease: 'power2.out',
+        paused: true, // Pauses the animation initially
+        onComplete: function() {
+          card.addEventListener('mouseenter', () => gsap.to(card, { scale: 1.05, rotation: 2, duration: 0.5 }));
+          card.addEventListener('mouseleave', () => gsap.to(card, { scale: 1, rotation: 0, duration: 0.5 }));
+        }
+      }
+    );
+  });
+});
+
