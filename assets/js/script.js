@@ -108,33 +108,119 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// testimonila slider work
+//gsap animation in HOME PAGE
 
-// let currentIndex = 0;
+//GSAP animation for hero section
 
-// function showSlide(index) {
-//   const slides = document.querySelectorAll('.testimonial-card');
-//   const totalSlides = slides.length;
+document.addEventListener('DOMContentLoaded', () => {
+  // GSAP animation for page load
+  gsap.from('.hero-content', {
+    duration: 1,
+    opacity: 0,
+    y: -50,
+    ease: 'power3.out',
+  });
 
-//   slides.forEach((slide, i) => {
-//     slide.style.display = i === index ? 'block' : 'none';
-//   });
+  gsap.from('.hero-banner-icon', {
+    duration: 1,
+    opacity: 0,
+    x: 50,
+    ease: 'power3.out',
+  });
 
-//   currentIndex = index;
-// }
+  // GSAP animation for cursor hover
+  const heroSection = document.querySelector('.hero');
+  heroSection.addEventListener('mousemove', (e) => {
+    const x = e.clientX / window.innerWidth - 0.5;
+    const y = e.clientY / window.innerHeight - 0.5;
 
-// function prevSlide() {
-//   const totalSlides = document.querySelectorAll('.testimonial-card').length;
-//   const newIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-//   showSlide(newIndex);
-// }
+    gsap.to('.hero-content', {
+      duration: 0.5,
+      x: x * 30,
+      y: y * 30,
+      ease: 'power3.out',
+    });
 
-// function nextSlide() {
-//   const totalSlides = document.querySelectorAll('.testimonial-card').length;
-//   const newIndex = (currentIndex + 1) % totalSlides;
-//   showSlide(newIndex);
-// }
+    gsap.to('.hero-banner-icon', {
+      duration: 0.5,
+      x: -x * 30,
+      y: -y * 30,
+      ease: 'power3.out',
+    });
+  });
+});
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   showSlide(currentIndex);
-// });
+// gsap animation for service section which is in home page 
+
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from('.section-subtitle', {
+    duration: 1,
+    opacity: 0,
+    y: -20,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.section-subtitle',
+      start: 'top 80%',
+      toggleActions: 'play none none reset'
+    },
+  });
+
+  gsap.from('.section-title', {
+    duration: 1,
+    opacity: 0,
+    y: -20,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.section-title',
+      start: 'top 80%',
+      toggleActions: 'play none none reset'
+    },
+  });
+
+  gsap.from('.service-card', {
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: 'power3.out',
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: '.service-list',
+      start: 'top 80%',
+      toggleActions: 'play none none reset'
+    },
+  });
+
+  gsap.from('.service-banner', {
+    duration: 1,
+    opacity: 0,
+    x: 50,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.service-banner',
+      start: 'top 80%',
+      toggleActions: 'play none none reset'
+    },
+  });
+
+  // Additional animation for service cards when hovered
+  const serviceCards = document.querySelectorAll('.service-card');
+  serviceCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, {
+        duration: 0.3,
+        scale: 1.05,
+        ease: 'power3.out'
+      });
+    });
+
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, {
+        duration: 0.3,
+        scale: 1,
+        ease: 'power3.out'
+      });
+    });
+  });
+});
