@@ -1,4 +1,4 @@
-Dentelo - We Are Best Dental Service
+First Smile - We Are Best Dental Service
 
 
 
@@ -8,7 +8,7 @@ Dentelo - We Are Best Dental Service
 info@example.com
 
 <ion-icon name="call-outline"></ion-icon>
-+91-7052-101-786
++91-7236-965-700
 
 <ion-icon name="logo-facebook"></ion-icon>
 <ion-icon name="logo-instagram"></ion-icon>
@@ -193,13 +193,13 @@ Contact Us
 LHB Colony, Kanpur
 
 <ion-icon name="call-outline"></ion-icon>
-+91-7052-101-786
++91-7236-965-700
 
 <ion-icon name="mail-outline"></ion-icon>
 help@example.com
 
 
-&copy; 2022 All Rights Reserved by codewithsadee.
+&copy; 2024 All Rights Reserved by Tryidol.
 
 <ion-icon name="logo-facebook"></ion-icon>
 <ion-icon name="logo-instagram"></ion-icon>
