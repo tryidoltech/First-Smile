@@ -104,6 +104,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 li {
@@ -155,6 +157,8 @@ html {
   font-family: var(--ff-roboto);
   font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
