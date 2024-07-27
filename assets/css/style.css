@@ -179,13 +179,17 @@ body {
   padding-block: var(--section-padding);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .section-subtitle {
   color: var(--royal-blue-light);
   font-family: var(--ff-poppins);
   font-size: var(--fs-5);
   font-weight: var(--fw-700);
   text-transform: uppercase;
-  margin-block-end: 10px;
+  margin-bottom: 10px;
 }
 
 .h1,
@@ -406,8 +410,8 @@ body {
 }
 
 .hero-banner-icon {
-  height: 500px;
-  width: 400px;
+  height: auto;
+  width: 100%;
 }
 
 #book-appointment {
@@ -417,40 +421,78 @@ body {
   #SERVICE
 \*-----------------------------------*/
 
-.service-banner {
-  display: none;
-}
-
-.service {
-  padding-block-end: 0;
-}
-
-.service .section-title {
-  margin-block-end: 50px;
-}
-
 .service-list {
-  display: grid;
-  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .service-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  min-height: 100%;
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-4);
-  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  flex: 1 1 calc(33.333% - 30px);
+  max-width: calc(33.333% - 50px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 2rem;
 }
 
-.service-card .card-icon {
-  width: 50px;
-  flex-shrink: 0;
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.service-card .card-title {
-  margin-block-end: 8px;
+.card-icon img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.service-banner {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.service-banner img {
+  max-width: 40%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+  .service-banner img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .service-banner img {
+    display: none;
+  }
 }
 
 /*-----------------------------------*\
@@ -607,7 +649,7 @@ body {
 
 .cta .section-title {
   color: var(--white);
-  font-size: var(--fs-3);
+  font-size: var(--fs-5);
   margin-block-end: 30px;
 }
 
