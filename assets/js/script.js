@@ -154,15 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1,
     opacity: 0,
     y: -50,
+    opacity: 0,
     ease: "power3.out",
   });
 
-  gsap.from(".hero-banner-icon", {
-    duration: 1,
-    opacity: 0,
-    x: 50,
-    ease: "power3.out",
-  });
+
 
   // GSAP animation for cursor hover
   const heroSection = document.querySelector(".hero");
@@ -399,3 +395,18 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
 });
+
+
+const wrapper = document.querySelector('.wrapper2');
+const indicators = [...document.querySelectorAll('.indicators button')];
+
+let currentTestimonial = 0; // Default 0
+
+indicators.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        indicators[currentTestimonial].classList.remove('active');
+        wrapper.style.marginLeft = `-${100 * i}%`;
+        item.classList.add('active');
+        currentTestimonial = i;
+    })
+})
