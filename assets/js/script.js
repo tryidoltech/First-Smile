@@ -410,3 +410,5 @@ indicators.forEach((item, i) => {
         currentTestimonial = i;
     })
 })
+
+

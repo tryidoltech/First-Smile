@@ -57,7 +57,7 @@
   --fs-3: 3.2rem;
   --fs-4: 2.4rem;
   --fs-5: 2.2rem;
-  --fs-6: 1.8rem;
+  --fs-6: 1.4rem;
   --fs-7: 1.6rem;
 
   --fw-800: 800;
@@ -239,8 +239,8 @@ body {
   border: none;
   font-family: inherit;
   font-weight: 500;
-  color: black;
-  background-color: white;
+  color: rgb(255, 255, 255);
+  background-color: rgb(54, 94, 217);
 }
 
 .btnc:hover {
@@ -537,6 +537,10 @@ body {
   width: 100%;
 } */
 
+#hide{
+  display: none;
+}
+
 .hero-banner-icon {
   height: auto;
   width: 100%;
@@ -555,6 +559,21 @@ body {
   #SERVICE
 \*-----------------------------------*/
 
+
+#bannar{
+  height: 40vh;
+  width: 100vw;
+  background: url("../images/bannar.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
 .service-list {
   display: flex;
   flex-wrap: wrap;
@@ -632,113 +651,89 @@ body {
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
-/* 
-.about {
-  padding-block-end: 0;
-}
 
-.about-banner {
-  margin-block-end: 50px;
-}
 
-.about-banner-hero{
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.about .section-text-1 {
-  margin-block: 25px 15px;
-}
-
-.about .btn {
-  font-size: unset;
-  max-width: max-content;
-  margin-block-start: 30px;
-  padding-inline: 15px;
-}
-
-.about-content-hero {
-  transform: translateX(100%);
-  opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.about-banner-hero:hover {
-  transform: translateX(0%) !important;
-  opacity: 1 !important;
-}
-
-.about-content-hero:hover {
-  transform: translateX(0%) !important;
-  opacity: 1 !important;
-} */
-
-#about {
-  /* border: 1px solid rgb(0, 0, 0); */
+#about{
   height: 80vh;
-  width: 100vw;
-
-  h1 {
-    font-size: 2vw;
-    text-align: left;
-    color: rgb(54, 94, 217);
-  }
-}
-.about-devider {
-  height: 80%;
-  width: 100%;
-  /* border: 2px solid rgb(255, 89, 0); */
+  width: 90vw;
+  /* border: 1px solid rgb(255, 0, 0); */
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
 }
-#about-left {
+.about-child{
+  height: 100%;
+  width: 50%;
+  /* border: 1px solid blue; */
+}
+#about #about-right{
+  padding: 2vw;
+  font-size: 1.5vw;
+  
+  
+}
+#about #about-right h4{
+  margin-bottom: .5vw;
+  color: var(--royal-blue-light);
+  
+
+}
+#about #about-right h1{
+  margin-bottom: .5vw;
+  line-height: 1.5;
+  color: var(--oxford-blue-3);
+  font-size: 35px;
+
+}
+#about #about-right p{
+  line-height: 1.5;
+  font-size: 18px;
+
+}
+#about #about-right button{
+  position: absolute;
+}
+#about-left{
+  padding: 2vw;
+
+}
+#about-img{
+  height: 100%;
+  width: 100%;
+
+}
+#about-img img{
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+
+
+
+/* about upper part */
+
+#about-upper{
+  height: 60vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#about-left img {
-  position: relative;
-  top: 5vw;
-  height: 90%;
-}
-.about-child {
-  height: 100%;
-  width: 50%;
-  /* border: 1px solid thistle;   */
-}
-
-#about-right {
-  display: flex;
-  text-align: left;
-  justify-content: center;
   flex-direction: column;
+  padding: 10vw;
+  text-align: center;
 
-  h2 {
-    color: black;
-    font-size: 3vw;
-    margin-bottom: 1vw;
-  }
-  p1 {
+  h1{
+    font-size: 32px;
     color: rgb(54, 94, 217);
+    margin-bottom: 16px;
   }
-  p2 {
-    font-size: 1vw;
-  }
-  h1 {
-    margin-top: 8vw;
-  }
-  #book-appointment {
-    position: relative;
-    margin: 0;
-    width: 180px;
-    margin-top: 20px;
+  p{
+    font-size: 16px;
   }
 }
-.about-right-wrapper {
-  /* border: 1px solid red; */
-  padding-right: 8vw;
-}
+
 
 /*-----------------------------------*\
   #DOCTOR
@@ -763,8 +758,9 @@ body {
 }
 
 .doctor-card .card-title {
-  font-size: var(--fs-4);
+  font-size: 18px;
   transition: var(--transition);
+  margin-top: 18px;
 }
 
 .doctor-card:is(:hover, :focus-within) .card-title {
@@ -836,7 +832,7 @@ body {
 
 .cta {
   margin-top: 16rem;
-  background-color: var(--oxford-blue-1);
+  background-color: rgba(140, 201, 255, 0.693);
 }
 
 .cta-banner {
@@ -878,7 +874,7 @@ body {
  background-color: white;
 
  h1{
-  color: #002aff;
+  color: rgb(54, 94, 217);
   font-size: 3vw;
  }
 }
@@ -942,7 +938,7 @@ body {
   background: #fff;
   text-transform: capitalize;
   font-size: 17px;
-  color: #002aff;
+  color: rgb(54, 94, 217);
   font-weight: bolder;
 }
 
@@ -959,6 +955,8 @@ body {
   font-size: 20px;
   line-height: 30px;
   margin-top: 30px;
+  font-family: var(--ff-poppins);
+  font-weight: lighter;
 }
 
 
@@ -1307,7 +1305,7 @@ button.active {
   }
 
   .section-subtitle {
-    --fs-6: 2.2rem;
+    --fs-6: 1.1rem;
   }
 
   /**
@@ -1569,16 +1567,6 @@ button.active {
    * ABOUT
    */
 
-  .about .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .about-banner {
-    margin-block-end: 0;
-  }
 
   /**
    * DOCTOR
@@ -1820,80 +1808,67 @@ button.active {
   .cta {
     margin-top: 5rem;
   }
-  #about{
-    padding: 3vh;
-    margin-top: 8vh;
-  }
-  #about-left {
-    display: none;
-  }
-
-  #about h1 {
-    text-align: center;
-    font-size: 4vh;
-  }
-
-  #about-right {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
+   #about{
+    flex-direction: column;    
+   }
+   .about-child{
     height: 50%;
-    margin-bottom: 14vw;
-
-    h2 {
-      color: rgb(0, 0, 0);
-      font-size: 3vh;
-      margin-bottom: 1vh;
-    }
-    p1 {
-      color: rgb(54, 94, 217);
-    }
-    p2 {
-      font-size: 2vh;
-    }
+    width: 100%;
   }
-  .about-right-wrapper {
-    /* border: 1px solid red; */
-    padding-right: 0;
-
+  #about #about-right{
+    padding: 1vh;
+    font-size: 1.5vh;
+    text-align: center;
+    /* height: 60%;   */
     
   }
-  #about-right #book-appointment {
+  #about #about-right h4{
+    margin-top: 3vh;
+    
+  
+  }
+
+  
+  #about #about-right h1{
+    margin-bottom: .5vw;
+    line-height: 1.2;
+    color: var(--oxford-blue-3);
+    font-size: 20px;
+    font-size: 1.2vh;
+  
+  }
+  #about #about-right p{
+    line-height: 1;
+    font-size: 1.2vh;
+  
+  }
+  #about #about-right button{
     position: relative;
-    margin: 0 auto;
-    width: 180px;
-    margin-top: 20px;
+  }
+  #bannar{
+    height: 30vh;
+    width: 100vw;
+   background: url("../images/bannar.jpeg");
+    margin-top: 10vh;
   }
 
-  #main-test h1{
-    color: #002aff;
-    font-size: 3vh;
-    margin-top: 2vh;
-   }
-}.about-devider{
-  height: 60%;
+  #about-upper{
+    height: 30vh;
+  
+    h1{
+      font-size: 3vh;
+      color: rgb(54, 94, 217);
+      margin-bottom: 2vh;
+    }
+    p{
+      font-size: 1.2vh;
+    }
+  }
+#hide{
+  display: block;
 }
 
-/* testimo media */
 
 
-@media (max-width: 800px) {
-  .container2 {
-    width: 50%;
-    margin: auto;
-  }
-  .card {
-    flex-direction: column;
-  }
-  .card-thumb {
-    width: 100%;
-    border-radius: 10px;
-  }
-  .card-body {
-    width: 100%;
-    min-height: auto;
-    margin-left: 0;
-  }
 }
+

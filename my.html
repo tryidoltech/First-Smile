@@ -3,247 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Testimonial</title>
-
-    <link rel="stylesheet" href="style.css">
-
+    <title>Responsive Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Roboto:wght@400&display=swap');
-
-*{
+    body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    font-family: 'Dosis', sans-serif;
-    }
-
-    #main-test{
-        width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'dosis';
-    color: #080808;
-    background: linear-gradient(110deg, #fc6a6a 0%, #ffc69d 100%);
-
-    }
-
-
-.container2{
+.slider {
     position: relative;
-    width: 800px;
-    min-width: 350px;
-    min-height: 250px;
-    padding-bottom: 40px;
+    width: 100vw;
+    height: 50vh;
     overflow: hidden;
 }
 
-.wrapper2{
-    width: 300%;
-    /* 300% 'caz we have 3 cards */
-    min-height: 100%;
+.slides {
     display: flex;
-    justify-content: space-between;
-    transition: 1s;
+    transition: transform 0.5s ease-in-out;
 }
 
-.card{
-    width: 800px;
-    min-height: 100%;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin: 0 10px;
-}
-
-.card-thumb{
-    width: 70%;
-    height: 250px;
-    overflow: hidden;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    position: relative;
-}
-
-.client-img{
-    width: 100%;
-    height: 100%;
+.slides img {
+    width: 100vw;
+    height: 50vh;
     object-fit: cover;
 }
 
-.client-name{
+button {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    padding: 5px 20px;
-    background: #fff;
-    text-transform: capitalize;
-    font-size: 14px;
-}
-
-.card-body{
-    width: 120%;
-    min-height: 100%;
-    height: auto;
-    margin-left: 20px;
-    position: relative;
-    padding-bottom: 50px;
-}
-
-.review{
-    font-size: 20px;
-    line-height: 30px;
-    margin-top: 30px;
-}
-
-.rating{
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.star{
-    width: 25px;
-    margin-right: 5px;
-}
-
-.indicators{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.indicators button{
-    background: none;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
-    outline: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 2px solid #fff;
+    padding: 10px;
     cursor: pointer;
-    margin-left: 5px;
-    transition: .5s;
+    z-index: 2;
 }
 
-button.active{
-    width: 40px;
-    border-radius: 50px;
-    background: #fff;
+.prev {
+    left: 10px;
 }
 
-@media (max-width: 800px){
-    .container2{
-        width: 50%;
-        margin: auto;
-    }
-    .card{
-        flex-direction: column;
-    }
-    .card-thumb{
-        width: 100%;
-        border-radius: 10px;
-    }
-    .card-body{
-        width: 100%;
-        min-height: auto;
-        margin-left: 0;
-    }
+.next {
+    right: 10px;
 }
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 </style>
 <body>
-    <div id="main-test">
-    
-        <div class="container2">
-            <div class="wrapper2">
-                <div class="card">
-                    <div class="card-thumb">
-                        <img src="img/img-1.jpeg" class="client-img" alt="">
-                        <span class="client-name">client one</span>
-                    </div>
-                    <div class="card-body">
-                        <p class="review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, nam. Fugiat, ut provident. Nulla quibusdam labore ea est consequatur sequi fuga iusto laudantium, earum doloremque?</p>
-                        <div class="rating">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-no-fill.png" class="star" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-thumb">
-                        <img src="img/img-2.jpeg" class="client-img" alt="">
-                        <span class="client-name">client two</span>
-                    </div>
-                    <div class="card-body">
-                        <p class="review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, nam. Fugiat, ut provident. Nulla quibusdam labore ea est consequatur sequi fuga iusto laudantium, earum doloremque?</p>
-                        <div class="rating">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-no-fill.png" class="star" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-thumb">
-                        <img src="img/img-3.jpeg" class="client-img" alt="">
-                        <span class="client-name">client three</span>
-                    </div>
-                    <div class="card-body">
-                        <p class="review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, nam. Fugiat, ut provident. Nulla quibusdam labore ea est consequatur sequi fuga iusto laudantium, earum doloremque?</p>
-                        <div class="rating">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-fill.png" class="star" alt="">
-                            <img src="img/star-no-fill.png" class="star" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="indicators">
-                <button class="active"></button>
-                <button></button>
-                <button></button>
-            </div>
+    <div class="slider">
+        <div class="slides">
+            <img src="./assets/images/blog-1.jpg" alt="Image 1">
+            <img src="./assets/images/blog-2.jpg" alt="Image 2">
+            <img src="./assets/images/blog-3.jpg" alt="Image 3">
+            <img src="./assets/images/blog-1.jpg" alt="Image 1">
+            <img src="./assets/images/blog-2.jpg" alt="Image 2">
+            <img src="./assets/images/blog-3.jpg" alt="Image 3">
+            <img src="./assets/images/blog-3.jpg" alt="Image 3">
         </div>
-     </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
 
-    <script>
-        const wrapper = document.querySelector('.wrapper2');
-const indicators = [...document.querySelectorAll('.indicators button')];
-
-let currentTestimonial = 0; // Default 0
-
-indicators.forEach((item, i) => {
-    item.addEventListener('click', () => {
-        indicators[currentTestimonial].classList.remove('active');
-        wrapper.style.marginLeft = `-${100 * i}%`;
-        item.classList.add('active');
-        currentTestimonial = i;
-    })
-})
-    </script>
-
+    <script src="script.js"></script>
 </body>
+<script>
+    let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    if (index >= totalSlides) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = totalSlides - 1;
+    } else {
+        currentSlide = index;
+    }
+    slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+</script>
 </html>

@@ -31,116 +31,133 @@
     <!-- 
     - #HEADER
   -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <ul class="contact-list">
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
 
-    <header class="header">
-      <div class="header-top">
-        <div class="container">
-          <ul class="contact-list">
-            <li class="contact-item">
-              <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:info@example.com" class="contact-link"
+              >info@example.com</a
+            >
+          </li>
 
-              <a href="mailto:info@example.com" class="contact-link"
-                >info@example.com</a
-              >
-            </li>
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
 
-            <li class="contact-item">
-              <ion-icon name="call-outline"></ion-icon>
+            <a href="tel:+917236965700" class="contact-link"
+              >+91-7236-965-700</a
+            >
+          </li>
+        </ul>
 
-              <a href="tel:+917052101786" class="contact-link"
-                >+91-7052-101-786</a
-              >
-            </li>
-          </ul>
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
 
-          <ul class="social-list">
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
 
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
 
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
       </div>
+    </div>
 
-      <div class="header-bottom" data-header>
-        <div class="container">
-          <a href="#" class="logo">
-            <img src="./assets/images/Logo3.png" alt="Logo" id="logo" />
-          </a>
+    <div class="header-bottom" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="./assets/images/Logo3.png" alt="Logo" id="logo" />
+        </a>
 
-          <nav class="navbar container" data-navbar>
-            <ul class="navbar-list">
-              <li>
-                <a href="./index.html" class="navbar-link" data-nav-link
-                  >Home</a
-                >
-              </li>
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="./index.html" class="navbar-link" data-nav-link
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="./about.html" class="navbar-link" data-nav-link
+                >About Us</a
+              >
+            </li>
 
-              <li>
-                <a href="./services.html" class="navbar-link" data-nav-link
-                  >Services</a
-                >
-              </li>
+            <li>
+              <a href="./services.html" class="navbar-link" data-nav-link
+                >Services</a
+              >
+            </li>
 
-              <li>
-                <a href="./about.html" class="navbar-link" data-nav-link
-                  >About Us</a
-                >
-              </li>
+            
 
-              <li>
-                <a href="./blog.html" class="navbar-link" data-nav-link>Blog</a>
-              </li>
+            <li>
+              <a href="./blog.html" class="navbar-link" data-nav-link>Blog</a>
+            </li>
 
-              <li>
-                <a href="./contact.html" class="navbar-link" data-nav-link
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </nav>
+            <li>
+              <a href="./contact.html" class="navbar-link" data-nav-link
+                 id="hide">Contact</a>
+            </li>            
 
-          <a href="#" class="btn" id="book-appointment">Book appointment</a>
 
-          <button
-            class="nav-toggle-btn"
-            aria-label="Toggle menu"
-            data-nav-toggler
-          >
-            <ion-icon
-              name="menu-sharp"
-              aria-hidden="true"
-              class="menu-icon"
-            ></ion-icon>
-            <ion-icon
-              name="close-sharp"
-              aria-hidden="true"
-              class="close-icon"
-            ></ion-icon>
+          </ul>
+        </nav>
+
+        <a href="./contact.html">
+
+
+          <button class="btnc"> Contact Us
           </button>
-        </div>
-      </div>
-    </header>
+          
+          
+          
+          
+        </a>
 
+        <!--  -->
+
+        
+
+
+        <button
+          class="nav-toggle-btn"
+          aria-label="Toggle menu"
+          data-nav-toggler
+        >
+          <ion-icon
+            name="menu-sharp"
+            aria-hidden="true"
+            class="menu-icon"
+          ></ion-icon>
+          <ion-icon
+            name="close-sharp"
+            aria-hidden="true"
+            class="close-icon"
+          ></ion-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
     <main>
       <article>
         <!-- 
@@ -497,7 +514,6 @@
       <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
     </a>
 
-    <!-- Add this before the closing </body> tag -->
     <div id="appointmentPopup" class="popup">
       <div class="popup-content">
         <span class="close">&times;</span>
