@@ -2,7 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-
 /**
  * copyright 2022 codewithsadee
  */
@@ -47,7 +46,6 @@
   /**
    * typography
    */
-   
 
   --ff-roboto: "Roboto", sans-serif;
   --ff-poppins: "Poppins", sans-serif;
@@ -537,7 +535,7 @@ body {
   width: 100%;
 } */
 
-#hide{
+#hide {
   display: none;
 }
 
@@ -559,21 +557,24 @@ body {
   #SERVICE
 \*-----------------------------------*/
 
-
-#bannar{
+#bannar {
   height: 40vh;
   width: 100vw;
   background: url("../images/bannar.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: 7vw;
+  margin-top: 8.75vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: #fff;
 }
+.blog #bannar{
+  margin-top: 0;
+}
+
 .service-list {
   display: flex;
   flex-wrap: wrap;
@@ -652,65 +653,57 @@ body {
   #ABOUT
 \*-----------------------------------*/
 
-
-#about{
+#about {
   height: 80vh;
   width: 90vw;
   /* border: 1px solid rgb(255, 0, 0); */
   margin: 0 auto;
   display: flex;
 }
-.about-child{
+.about-child {
   height: 100%;
   width: 50%;
   /* border: 1px solid blue; */
 }
-#about #about-right{
+#about #about-right {
   padding: 2vw;
   font-size: 1.5vw;
-  
-  
 }
-#about #about-right h4{
-  margin-bottom: .5vw;
+#about #about-right h4 {
+  margin-bottom: 0.5vw;
   color: var(--royal-blue-light);
-  
-
 }
-#about #about-right h1{
-  margin-bottom: .5vw;
+#about #about-right h1 {
+  margin-bottom: 0.5vw;
   line-height: 1.5;
   color: var(--oxford-blue-3);
   font-size: 35px;
-
 }
-#about #about-right p{
+#about #about-right p {
   line-height: 1.5;
   font-size: 18px;
-
 }
-#about #about-right button{
+#about #about-right button {
   position: absolute;
 }
-#about-left{
+#about-left {
   padding: 2vw;
-
 }
-#about-img{
+#about-img {
   height: 100%;
   width: 100%;
-
 }
-#about-img img{
+#about-img img {
   height: 100%;
   width: 100%;
   border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 /* about upper part */
 
-#about-upper{
+#about-upper {
   height: 60vh;
   width: 100vw;
   display: flex;
@@ -720,16 +713,15 @@ body {
   padding: 10vw;
   text-align: center;
 
-  h1{
+  h1 {
     font-size: 32px;
     color: rgb(54, 94, 217);
     margin-bottom: 16px;
   }
-  p{
+  p {
     font-size: 16px;
   }
 }
-
 
 /*-----------------------------------*\
   #DOCTOR
@@ -828,7 +820,7 @@ body {
 
 .cta {
   margin-top: 16rem;
-  background-color: rgba(140, 201, 255, 0.693);
+  background-color: rgba(255, 255, 255, 0.693);
 }
 
 .cta-banner {
@@ -840,7 +832,7 @@ body {
 }
 
 .cta .section-title {
-  color: var(--white);
+  color: black;
   font-size: var(--fs-5);
   margin-block-end: 30px;
 }
@@ -857,7 +849,6 @@ body {
   #TESTIMONIAL
 \*-----------------------------------*/
 
-
 #main-test {
   width: 100%;
   height: 70vh;
@@ -865,14 +856,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: var(--ff-poppins)  ;
+  font-family: var(--ff-poppins);
   color: #080808;
- background-color: white;
+  background-color: white;
 
- h1{
-  color: rgb(54, 94, 217);
-  font-size: 3vw;
- }
+  h1 {
+    color: rgb(54, 94, 217);
+    font-size: 3vw;
+  }
 }
 
 .container2 {
@@ -881,8 +872,8 @@ body {
   min-width: 350px;
   min-height: 250px;
   padding-bottom: 40px;
-  overflow: hidden;  
- /* border: 1px solid blue; */
+  overflow: hidden;
+  /* border: 1px solid blue; */
 }
 
 .wrapper2 {
@@ -892,8 +883,8 @@ body {
   display: flex;
   justify-content: space-between;
   transition: 1s;
-  
- /* border: 1px solid blue; */
+
+  /* border: 1px solid blue; */
 }
 
 .card {
@@ -954,7 +945,6 @@ body {
   font-family: var(--ff-poppins);
   font-weight: lighter;
 }
-
 
 .indicators {
   position: absolute;
@@ -1563,7 +1553,6 @@ button.active {
    * ABOUT
    */
 
-
   /**
    * DOCTOR
    */
@@ -1804,67 +1793,57 @@ button.active {
   .cta {
     margin-top: 5rem;
   }
-   #about{
-    flex-direction: column;    
-   }
-   .about-child{
+  #about {
+    flex-direction: column;
+  }
+  .about-child {
     height: 50%;
     width: 100%;
   }
-  #about #about-right{
+  #about #about-right {
     padding: 1vh;
     font-size: 1.5vh;
     text-align: center;
     /* height: 60%;   */
-    
   }
-  #about #about-right h4{
+  #about #about-right h4 {
     margin-top: 3vh;
-    
-  
   }
 
-  
-  #about #about-right h1{
-    margin-bottom: .5vw;
+  #about #about-right h1 {
+    margin-bottom: 0.5vw;
     line-height: 1.2;
     color: var(--oxford-blue-3);
     font-size: 20px;
     font-size: 1.2vh;
-  
   }
-  #about #about-right p{
+  #about #about-right p {
     line-height: 1;
     font-size: 1.2vh;
-  
   }
-  #about #about-right button{
+  #about #about-right button {
     position: relative;
   }
-  #bannar{
+  #bannar {
     height: 30vh;
     width: 100vw;
-   background: url("../images/bannar.jpeg");
+    background: url("../images/bannar.jpeg");
     margin-top: 10vh;
   }
-
-  #about-upper{
+ 
+  #about-upper {
     height: 30vh;
-  
-    h1{
+
+    h1 {
       font-size: 3vh;
       color: rgb(54, 94, 217);
       margin-bottom: 2vh;
     }
-    p{
+    p {
       font-size: 1.2vh;
     }
   }
-#hide{
-  display: block;
+  #hide {
+    display: block;
+  }
 }
-
-
-
-}
-

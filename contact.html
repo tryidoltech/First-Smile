@@ -115,8 +115,16 @@
             </ul>
           </nav>
 
-          <a href="#" class="btn" id="book-appointment">Book appointment</a>
+          <a href="./contact.html">
 
+
+            <button class="btnc"> Contact Us
+            </button>
+            
+            
+            
+            
+          </a>
           <button
             class="nav-toggle-btn"
             aria-label="Toggle menu"
@@ -139,58 +147,9 @@
 
     <main>
       <article>
-        <!-------------  Contact section ----------------->
+         <!------------  Google map  ---------------------->
 
-        <section class="section contact" id="contact" aria-label="contact">
-          <div class="container">
-            <p class="section-subtitle text-center">Contact Us</p>
-            <form class="contact-form">
-              <div class="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Enter Your Name"
-                  required
-                  class="form-control"
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter Your Email"
-                  required
-                  class="form-control"
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  placeholder="Enter Your Phone"
-                  class="form-control"
-                />
-              </div>
-              <div class="form-group">
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Write Your Message"
-                  required
-                  class="form-control"
-                ></textarea>
-              </div>
-              <button type="submit" class="btn">Send Message</button>
-            </form>
-          </div>
-        </section>
-
-        <!------------  Google map  ---------------------->
-
-        <div class="map-container">
+         <div class="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.692621472168!2d77.42457967509918!3d23.25426987901202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c427f75ccbf71%3A0xbfe901e76ca48007!2sSuper%20Shadi%20Hall!5e0!3m2!1sen!2sin!4v1721904448063!5m2!1sen!2sin"
             width="100%"
@@ -201,6 +160,74 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+        <!-------------  Contact section ----------------->
+
+        <section class="section contact" id="contact" aria-label="contact">
+          <div class="left-container">
+
+            <div id="left-container-img">
+              <img src="./assets/images/blog-3.jpg" alt="">
+            </div>
+
+
+          </div>
+          <div class="right-container">
+            <div class="container">
+              <p class="section-subtitle text-center">Contact Us</p>
+              <form class="contact-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter Your Name"
+                    required
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter Your Email"
+                    required
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter Your Phone"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Write Your Message"
+                    required
+                    class="form-control"
+                  ></textarea>
+                </div>
+                <!-- <button type="submit" class="btn">Send Message</button> -->
+                <button class="ctbtn" type="submit">
+                  <span >Send Message</span>
+                  <!-- <svg width="15px" height="10px" viewBox="0 0 13 10">  -->
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+         
+        </section>
+
+       
 
         <!---------------------  Blog section  ----------------------->
 
@@ -553,8 +580,6 @@
     >
       <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
     </a>
-
-    <!-- Add this before the closing </body> tag -->
     <div id="appointmentPopup" class="popup">
       <div class="popup-content">
         <span class="close">&times;</span>
