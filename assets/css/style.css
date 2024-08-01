@@ -1808,18 +1808,21 @@ button.active {
   }
   #about #about-right h4 {
     margin-top: 3vh;
+    font-size: 4vw;
   }
 
   #about #about-right h1 {
     margin-bottom: 0.5vw;
     line-height: 1.2;
     color: var(--oxford-blue-3);
-    font-size: 20px;
-    font-size: 1.2vh;
+    font-size: 25px;
+    margin-top: 2vh;
+    font-size: 1.8vh;
   }
   #about #about-right p {
     line-height: 1;
-    font-size: 1.2vh;
+    font-size: 1.7vh;
+    margin-top: 2vh;
   }
   #about #about-right button {
     position: relative;
