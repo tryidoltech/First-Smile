@@ -1724,6 +1724,7 @@ button.active {
   .hero-content{
     position: relative;
     bottom: 21vh;
+    right: 1.5vh;
   }
   
   .hero-align {
