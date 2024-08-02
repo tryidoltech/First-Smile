@@ -270,6 +270,9 @@ body {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
+.hero-img-for-phone{
+  display: none;
+}
 
 /*-----------------------------------*\
   #REUSED STYLE
@@ -1717,6 +1720,12 @@ button.active {
 /* media queries for responsivenes */
 
 @media (max-width: 768px) {
+
+  .hero-content{
+    position: relative;
+    bottom: 13vh;
+  }
+  
   .hero-align {
     height: 73vh;
     padding: 2vw;
@@ -1744,6 +1753,7 @@ button.active {
     flex-direction: column;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 20px;
+    height: fit-content;
   }
 
   #about-left{
@@ -1751,7 +1761,7 @@ button.active {
     width: 100%;
   }
   #about #about-right {
-    padding: 3vh 1.5vh;
+    padding: 3vh 2.5vh;
     height: 60%;
     width: 100%;
     font-size: 16px;
@@ -1768,16 +1778,16 @@ button.active {
     color: var(--oxford-blue-3);
     font-size: 25px;
     margin-top: 2vh;
-    font-size: 1.8vh;
+    font-size: 25px;
   }
   #about #about-right p {
-    line-height: 1;
+    line-height: 1.5;
     font-size: 1.7vh;
     margin-top: 2vh;
   }
   #about #about-right button {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   #bannar {
     height: 30vh;
@@ -1803,6 +1813,18 @@ button.active {
   }
   .cta button{
     
-    margin-left: 90px;
+    margin-left: 60px;
   }
+
+
+  #home{
+    background: url(../images/mobilebg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5vh;
+  }
+}
+.hero{
+  background-image: url(../images/hero-bg.png);
 }
