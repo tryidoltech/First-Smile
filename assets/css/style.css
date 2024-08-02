@@ -1742,16 +1742,20 @@ button.active {
   }
   #about {
     flex-direction: column;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 20px;
   }
-  .about-child {
-    height: 50%;
+
+  #about-left{
+    height: 40%;
     width: 100%;
   }
   #about #about-right {
-    padding: 1vh;
-    font-size: 1.5vh;
+    padding: 3vh 1.5vh;
+    height: 60%;
+    width: 100%;
+    font-size: 16px;
     text-align: center;
-    /* height: 60%;   */
   }
   #about #about-right h4 {
     margin-top: 3vh;
@@ -1773,6 +1777,7 @@ button.active {
   }
   #about #about-right button {
     position: relative;
+    margin-bottom: 50px;
   }
   #bannar {
     height: 30vh;
@@ -1795,5 +1800,9 @@ button.active {
   }
   #hide {
     display: block;
+  }
+  .cta button{
+    
+    margin-left: 90px;
   }
 }
